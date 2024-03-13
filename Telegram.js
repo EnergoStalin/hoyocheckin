@@ -1,7 +1,7 @@
 function _(str) {
   return str
     .replaceAll(/\s*\n\s*/g, "\n")
-    .replaceAll(/([\.])/g, "\\$1")
+    .replaceAll(/([\.!])/g, "\\$1")
 }
 
 async function sendTelegram(message) {
