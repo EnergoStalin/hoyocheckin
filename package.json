@@ -3,12 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@google/clasp": "^2.4.2"
-  }
+  "license": "ISC"
 }
