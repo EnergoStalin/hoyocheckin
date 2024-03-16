@@ -88,10 +88,10 @@ async function sign(url, actId, cookies) {
 
   api.sign()
 
-  return _(`
-    Signed in successfully! You have signed in for ${data.total} days!
+  return `
+    Signed in successfully! You have signed in for ${data.totalSigned} days!
     You have received ${awardData.count}x ${awardData.name}!
-  `)
+  `
 }
 
 async function daily() {
@@ -101,14 +101,12 @@ async function daily() {
       sign("https://sg-public-api.hoyolab.com/event/mani", "e202110291205111", HEADERS)
     ])
 
-    await sendTelegram(
-      _(`
-        [HSR](https://act.hoyolab.com/bbs/event/signin/hkrpg/index.html):
-        ${HSR}
-        [HI3](https://act.hoyolab.com/bbs/event/signin-bh3/index.html):
-        ${HI3}
-      `)
-    )
+    await sendTelegram(`
+      [HSR](https://act.hoyolab.com/bbs/event/signin/hkrpg/index.html):
+      ${HSR}
+      [HI3](https://act.hoyolab.com/bbs/event/signin-bh3/index.html):
+      ${HI3}
+    `)
   } catch (ex) {
     await sendTelegram(`Exception caught: ${ex}`)
   }

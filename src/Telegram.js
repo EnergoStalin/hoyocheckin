@@ -5,6 +5,7 @@ function _(str) {
 }
 
 async function sendTelegram(message) {
+  message = _(message)
   console.log(message)
   UrlFetchApp.fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN()}/sendMessage`, {
     method: "POST",
