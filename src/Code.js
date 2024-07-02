@@ -101,6 +101,8 @@ async function daily() {
       sign("https://sg-public-api.hoyolab.com/event/mani", "e202110291205111", HEADERS)
     ])
 
+    if(!ScriptProperties.getProperty("notify-success")) return
+
     await sendTelegram(`
       [HSR](https://act.hoyolab.com/bbs/event/signin/hkrpg/index.html):
       ${HSR}
